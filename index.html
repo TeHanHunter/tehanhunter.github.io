@@ -5,39 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Te Han - Exoplanet Researcher</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0;
+    }
+    .banner-avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    .tab {
+      display: none;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Hide photo, contact, and title in all tabs except 'about' */
+    .no-about .banner-avatar,
+    .no-about #banner-contact,
+    .no-about h1,
+    .no-about #banner-role {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header id="header">
+    <img src="avatar.jpeg" alt="Te Han" class="banner-avatar">
     <h1>Te Han</h1>
-    <p>Exoplanet Researcher</p>
-    <p><a href="mailto:teh2@uci.edu">teh2@uci.edu</a> • (805) 280-6544 • Irvine, CA</p>
+    <p id="banner-role">Exoplanet Researcher</p>
+    <p id="banner-contact">
+      <a href="mailto:teh2@uci.edu" style="text-decoration: none;">teh2@uci.edu</a> • (805) 280-6544 • Irvine, CA</p>
+    <h3 id="banner-title"></h3>
     <nav>
-      <button onclick="showTab('about')">About</button>
-      <button onclick="showTab('education')">Education</button>
-      <button onclick="showTab('experience')">Experience</button>
-      <button onclick="showTab('publications')">Publications</button>
-      <button onclick="showTab('talks')">Talks</button>
-      <button onclick="showTab('skills')">Skills</button>
-      <button onclick="showTab('extra')">Extras</button>
+      <button onclick="showTab('about')"><i class="fa-solid fa-user-astronaut"></i> About</button>
+      <button onclick="showTab('background')"><i class="fas fa-graduation-cap"></i> Background</button>
+      <button onclick="showTab('research')"><i class="fa-solid fa-meteor"></i> Research</button>
+      <button onclick="showTab('skills')"><i class="fa-solid fa-circle-question"></i> Side Quests</button>
     </nav>
   </header>
 
   <main>
     <section id="about" class="tab">
-      <h2>About</h2>
+      <h2>Hi, I'm Te Han.</h2>
       <p>I am an astrophysicist working on multiple aspects of exoplanet research. I led work on the TESS-Gaia Light Curve (TGLC) and published two papers that established TGLC as a key resource in the field. I also led the analysis of TOI-5344 b, a rare giant exoplanet orbiting an M-dwarf. My contributions include the NEIDSpecMatch algorithm for stellar parameter estimation and the SURFSUP survey of ultra-fast rotators.</p>
     </section>
 
-    <section id="education" class="tab">
+    <section id="background" class="tab">
       <h2>Education</h2>
       <ul>
-        <li><strong>Ph.D. Physics</strong>, UC Irvine, Sep 2021 – Dec 2026 (expected)</li>
+        <li><strong>Ph.D. Physics</strong>, UC Irvine, Sep 2021 – </li>
         <li><strong>M.S. Physics</strong>, UC Irvine, Sep 2021 – Nov 2024</li>
         <li><strong>B.S. Physics</strong>, UC Santa Barbara, Sep 2017 – Aug 2020<br>GPA: 3.99/4.00, Highest Honors</li>
       </ul>
-    </section>
-
-    <section id="experience" class="tab">
       <h2>Experience</h2>
       <ul>
         <li><strong>Graduate Student Researcher</strong>, UC Irvine, Jan 2023 – Present</li>
@@ -48,17 +101,14 @@
       </ul>
     </section>
 
-    <section id="publications" class="tab">
+    <section id="research" class="tab">
       <h2>First-Author Publications</h2>
       <ul>
         <li><strong>TESS–Gaia Light Curve:</strong> Han & Brandt 2023</li>
         <li><strong>TOI-5344 b:</strong> Han et al. 2024</li>
+        <li><strong>NEIDSpecMatch:</strong> Han et al. 2025</li>
         <li><strong>TGLC Statistical Analyses:</strong> Han et al. (in prep)</li>
-        <li><strong>NEIDSpecMatch:</strong> Han et al. (in prep)</li>
       </ul>
-    </section>
-
-    <section id="talks" class="tab">
       <h2>Talks and Posters</h2>
       <ul>
         <li>Contributed Talk, TESS Mission Update (MIT, Jun 2023)</li>
@@ -67,21 +117,18 @@
         <li>Invited Talk, TESS Science Talk (MIT, Apr 2024)</li>
         <li>Poster, CoolStars22 (UCSD, Jun 2024)</li>
         <li>Contributed Talk, TESS Science Conference III (MIT, Jul 2024)</li>
+        <li>Poster, Know Thy Star, Know Thy Planet 2 (Caltech, Feb 2025)</li>
       </ul>
     </section>
 
     <section id="skills" class="tab">
       <h2>Skills</h2>
       <p>Python, Ground telescope planning and observation, 3D modeling, Data analysis, Teaching</p>
-      <h3>Languages</h3>
+      <h2>Languages</h2>
       <p>Chinese (Native), English (Highly proficient)</p>
-    </section>
-
-    <section id="extra" class="tab">
-      <h2>Extras</h2>
-      <h3>Side Quests</h3>
+      <h2>Hobbies</h2>
       <p>Astrophotography, Gaming, Violin, 3D printing, DSLR/Drone photography, Traveling, Writing</p>
-      <h3>Links</h3>
+      <h2>Links</h2>
       <ul>
         <li><a href="https://github.com/TeHanHunter" target="_blank">GitHub</a></li>
         <li><a href="https://makerworld.com/@tehanhunter" target="_blank">MakerWorld</a></li>
@@ -94,8 +141,19 @@
       document.querySelectorAll('.tab').forEach(tab => {
         tab.style.display = tab.id === tabId ? 'block' : 'none';
       });
+
+      const header = document.getElementById('header');
+      header.classList.toggle('no-about', tabId !== 'about');
+
+      // Update the banner title for non-'about' tabs
+      const bannerTitle = document.getElementById('banner-title');
+      if (tabId !== 'about') {
+        bannerTitle.textContent = "Te Han";
+      } else {
+        bannerTitle.textContent = "";
+      }
     }
-    showTab('about'); // default tab
+    showTab('about');
   </script>
 </body>
 </html>
