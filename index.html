@@ -1,200 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te Han - Exoplanet Researcher</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        /* Navigation */
-        .nav-container {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .nav-tabs {
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            gap: 2rem;
-            font-family: 'Times New Roman', serif;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(45deg, var(--primary), #34495e);
-            color: white;
-        }
-
-        .profile-photo {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 6rem 2rem 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section h2 {
-            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        /* Publications Grid */
-        .pub-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .pub-card {
-            background: white;
-            padding: 2rem;
-            border-left: 4px solid var(--secondary);
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
-
-        /* Talks Timeline */
-        .talk-item {
-            position: relative;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 3px solid var(--secondary);
-            transition: transform 0.3s ease;
-        }
-
-        .talk-item:hover {
-            transform: translateX(10px);
-        }
-
-        /* Hobbies Grid */
-        .hobby-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .hobby-card {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Han - Exoplanet Researcher</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="nav-container">
-        <div class="nav-tabs">
-            <div class="nav-tab active" onclick="showSection('home')">Home</div>
-            <div class="nav-tab" onclick="showSection('publications')">Publications</div>
-            <div class="nav-tab" onclick="showSection('talks')">Talks</div>
-            <div class="nav-tab" onclick="showSection('research')">Research</div>
-            <div class="nav-tab" onclick="showSection('hobbies')">Hobbies</div>
-        </div>
-    </div>
+  <header>
+    <h1>Te Han</h1>
+    <p>Exoplanet Researcher</p>
+    <p><a href="mailto:teh2@uci.edu">teh2@uci.edu</a> • (805) 280-6544 • Irvine, CA</p>
+    <nav>
+      <button onclick="showTab('about')">About</button>
+      <button onclick="showTab('education')">Education</button>
+      <button onclick="showTab('experience')">Experience</button>
+      <button onclick="showTab('publications')">Publications</button>
+      <button onclick="showTab('talks')">Talks</button>
+      <button onclick="showTab('skills')">Skills</button>
+      <button onclick="showTab('extra')">Extras</button>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <img src="profile.jpg" alt="Te Han" class="profile-photo">
-        <h1 style="font-size: 3rem; letter-spacing: 2px;">Te Han</h1>
-        <h2 style="font-weight: 400; margin-top: 0.5rem;">Exoplanet Researcher</h2>
-        <div style="margin-top: 2rem;">
-            <a href="mailto:TEH2@UCLEDU" style="color: white; text-decoration: none;">
-                <i class="fas fa-envelope"></i> TEH2@UCLEDU
-            </a>
-        </div>
+  <main>
+    <section id="about" class="tab">
+      <h2>About</h2>
+      <p>I am an astrophysicist working on multiple aspects of exoplanet research. I led work on the TESS-Gaia Light Curve (TGLC) and published two papers that established TGLC as a key resource in the field. I also led the analysis of TOI-5344 b, a rare giant exoplanet orbiting an M-dwarf. My contributions include the NEIDSpecMatch algorithm for stellar parameter estimation and the SURFSUP survey of ultra-fast rotators.</p>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section hidden">
-        <h2>Publications</h2>
-        <div class="pub-grid">
-            <!-- Publication cards from CV -->
-            <div class="pub-card">
-                <h3>TESS–Gaia Light Curve</h3>
-                <p class="meta">Han & Brandt 2023</p>
-                <p>PSF-based TESS FFI light-curve product now widely used in stellar and exoplanet sciences</p>
-            </div>
-            <!-- Add other publications -->
-        </div>
+    <section id="education" class="tab">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Ph.D. Physics</strong>, UC Irvine, Sep 2021 – Dec 2026 (expected)</li>
+        <li><strong>M.S. Physics</strong>, UC Irvine, Sep 2021 – Nov 2024</li>
+        <li><strong>B.S. Physics</strong>, UC Santa Barbara, Sep 2017 – Aug 2020<br>GPA: 3.99/4.00, Highest Honors</li>
+      </ul>
     </section>
 
-    <!-- Talks Section -->
-    <section id="talks" class="section hidden">
-        <h2>Conference Presentations</h2>
-        <div class="talk-list">
-            <!-- Talk items from CV -->
-            <div class="talk-item">
-                <h3>TESS Science Conference III</h3>
-                <p class="meta">July 2024 | MIT</p>
-                <p>Contributed talk: TESS-Gaia Light Curve statistical analysis</p>
-            </div>
-            <!-- Add other talks -->
-        </div>
+    <section id="experience" class="tab">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Graduate Student Researcher</strong>, UC Irvine, Jan 2023 – Present</li>
+        <li><strong>Teaching Assistant</strong>, UC Irvine, Sep 2021 – Dec 2022</li>
+        <li><strong>Lab Assistant</strong>, UCSB, Oct 2020 – Aug 2021</li>
+        <li><strong>Physics Study Room Fellow</strong>, UCSB, Apr 2018 – Jun 2020</li>
+        <li><strong>Learning Assistant</strong>, UCSB, Apr 2018 – Jun 2019</li>
+      </ul>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="section hidden">
-        <h2>Research Focus</h2>
-        <!-- Research content -->
+    <section id="publications" class="tab">
+      <h2>First-Author Publications</h2>
+      <ul>
+        <li><strong>TESS–Gaia Light Curve:</strong> Han & Brandt 2023</li>
+        <li><strong>TOI-5344 b:</strong> Han et al. 2024</li>
+        <li><strong>TGLC Statistical Analyses:</strong> Han et al. (in prep)</li>
+        <li><strong>NEIDSpecMatch:</strong> Han et al. (in prep)</li>
+      </ul>
     </section>
 
-    <!-- Hobbies Section -->
-    <section id="hobbies" class="section hidden">
-        <h2>Personal Pursuits</h2>
-        <div class="hobby-grid">
-            <!-- Hobby cards -->
-        </div>
+    <section id="talks" class="tab">
+      <h2>Talks and Posters</h2>
+      <ul>
+        <li>Contributed Talk, TESS Mission Update (MIT, Jun 2023)</li>
+        <li>Invited Talk, TESS Science Talk (MIT, Aug 2023)</li>
+        <li>Invited Talk, ExSoCal (Caltech, Dec 2023)</li>
+        <li>Invited Talk, TESS Science Talk (MIT, Apr 2024)</li>
+        <li>Poster, CoolStars22 (UCSD, Jun 2024)</li>
+        <li>Contributed Talk, TESS Science Conference III (MIT, Jul 2024)</li>
+      </ul>
     </section>
 
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
-            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(sectionId).classList.remove('hidden');
-            event.currentTarget.classList.add('active');
+    <section id="skills" class="tab">
+      <h2>Skills</h2>
+      <p>Python, Ground telescope planning and observation, 3D modeling, Data analysis, Teaching</p>
+      <h3>Languages</h3>
+      <p>Chinese (Native), English (Highly proficient)</p>
+    </section>
 
-            if(sectionId !== 'home') {
-                document.getElementById(sectionId).scrollIntoView({behavior: 'smooth'});
-            } else {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            }
-        }
-    </script>
+    <section id="extra" class="tab">
+      <h2>Extras</h2>
+      <h3>Side Quests</h3>
+      <p>Astrophotography, Gaming, Violin, 3D printing, DSLR/Drone photography, Traveling, Writing</p>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://github.com/TeHanHunter" target="_blank">GitHub</a></li>
+        <li><a href="https://makerworld.com/@tehanhunter" target="_blank">MakerWorld</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.style.display = tab.id === tabId ? 'block' : 'none';
+      });
+    }
+    showTab('about'); // default tab
+  </script>
 </body>
 </html>
