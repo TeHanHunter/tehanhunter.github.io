@@ -1,204 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Keep existing head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Han - Exoplanet Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Add these new styles */
-        .pub-status {
-            font-size: 0.9rem;
-            color: var(--accent);
-            float: right;
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
         }
 
-        .talk-timeline {
-            border-left: 2px solid var(--secondary);
-            padding-left: 2rem;
-            margin: 2rem 0;
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            line-height: 1.8;
         }
 
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            gap: 2rem;
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(45deg, var(--primary), #34495e);
+            color: white;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 6rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Publications Grid */
+        .pub-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .pub-card {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Talks Timeline */
         .talk-item {
             position: relative;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 3px solid var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .talk-item:hover {
+            transform: translateX(10px);
+        }
+
+        /* Hobbies Grid */
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .hobby-card {
+            text-align: center;
+            padding: 2rem;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
         }
-
-        .talk-item::before {
-            content: '';
-            position: absolute;
-            left: -2.4rem;
-            top: 24px;
-            width: 15px;
-            height: 15px;
-            background: var(--secondary);
-            border-radius: 50%;
-        }
-
-        .talk-type {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 1rem;
-        }
-
-        .invited { background: #3498db20; color: var(--secondary); }
-        .contributed { background: #2ecc7120; color: #27ae60; }
-        .poster { background: #f1c40f20; color: #f39c12; }
     </style>
 </head>
 <body>
-    <!-- Update Publications Section -->
-    <section id="publications" class="section hidden">
-        <h2>Publications</h2>
-
-        <div class="publication-card">
-            <span class="pub-status">Published 2023</span>
-            <h3>TESS–Gaia Light Curve: A PSF-Based TESS FFI Light-Curve Product</h3>
-            <p>Han & Brandt 2023, The Astronomical Journal</p>
-            <p>Now widely used in stellar and exoplanet sciences</p>
-        </div>
-
-        <div class="publication-card">
-            <span class="pub-status">Published 2024</span>
-            <h3>TOI-5344 B: A Saturn-like Planet Orbiting a Super-Solar Metallicity M-dwarf</h3>
-            <p>Han et al. 2024, The Astrophysical Journal</p>
-            <p>Discovery of rare GEMS (Giant Exoplanets around M-dwarf Stars)</p>
-        </div>
-
-        <div class="publication-card">
-            <span class="pub-status">In Preparation</span>
-            <h3>TESS-Gaia Light Curve: Statistical Analyses Demonstrate TGLC's Superior Photometric Precision</h3>
-            <p>Han et al. (in prep.)</p>
-        </div>
-
-        <div class="publication-card">
-            <span class="pub-status">In Preparation</span>
-            <h3>NEIDSpecMatch: Stellar Parameter Measurements with NEID Spectra</h3>
-            <p>Han et al. (in prep.)</p>
-            <p>Novel spectral matching algorithm development</p>
-        </div>
-    </section>
-
-    <!-- Add Talks Section -->
-    <section id="talks" class="section hidden">
-        <h2>Conference Presentations</h2>
-        <div class="talk-timeline">
-
-            <div class="talk-item">
-                <span class="talk-type invited">Invited Talk</span>
-                <h3>TESS Science Talk</h3>
-                <div class="talk-meta">
-                    <i class="fas fa-calendar"></i> Aug 2-3, 2023
-                    <i class="fas fa-map-marker-alt"></i> MIT Kavli Institute
-                </div>
-                <p>"TESS-Gaia Light Curve: Technical Details"</p>
-            </div>
-
-            <div class="talk-item">
-                <span class="talk-type contributed">Contributed Talk</span>
-                <h3>TESS Mission Update Meeting</h3>
-                <div class="talk-meta">
-                    <i class="fas fa-calendar"></i> June 22-23, 2023
-                    <i class="fas fa-map-marker-alt"></i> MIT
-                </div>
-                <p>"TESS-Gaia Light Curve"</p>
-            </div>
-
-            <div class="talk-item">
-                <span class="talk-type invited">Invited Talk</span>
-                <h3>ExSoCal 2023</h3>
-                <div class="talk-meta">
-                    <i class="fas fa-calendar"></i> Dec 11-12, 2023
-                    <i class="fas fa-map-marker-alt"></i> Caltech
-                </div>
-                <p>"TOI-5344 b as a new Giant Exoplanet around M-dwarf Stars (GEMS)"</p>
-            </div>
-
-            <div class="talk-item">
-                <span class="talk-type poster">Poster</span>
-                <h3>Cool Stars 22</h3>
-                <div class="talk-meta">
-                    <i class="fas fa-calendar"></i> June 24-28, 2024
-                    <i class="fas fa-map-marker-alt"></i> UC San Diego
-                </div>
-                <p>"Surveying Ultrafast Rotators For SUperyoung Planets (SURFSUP)"</p>
-            </div>
-
-            <div class="talk-item">
-                <span class="talk-type contributed">Contributed Talk</span>
-                <h3>TESS Science Conference III</h3>
-                <div class="talk-meta">
-                    <i class="fas fa-calendar"></i> July 29-Aug 2, 2024
-                    <i class="fas fa-map-marker-alt"></i> MIT
-                </div>
-                <p>"TESS-Gaia Light Curve Statistical Analysis"</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Update Navigation -->
+    <!-- Navigation -->
     <div class="nav-container">
         <div class="nav-tabs">
-            <!-- Previous tabs -->
+            <div class="nav-tab active" onclick="showSection('home')">Home</div>
+            <div class="nav-tab" onclick="showSection('publications')">Publications</div>
             <div class="nav-tab" onclick="showSection('talks')">Talks</div>
+            <div class="nav-tab" onclick="showSection('research')">Research</div>
+            <div class="nav-tab" onclick="showSection('hobbies')">Hobbies</div>
         </div>
     </div>
 
-    <!-- Update Hobbies Section -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="profile.jpg" alt="Te Han" class="profile-photo">
+        <h1 style="font-size: 3rem; letter-spacing: 2px;">Te Han</h1>
+        <h2 style="font-weight: 400; margin-top: 0.5rem;">Exoplanet Researcher</h2>
+        <div style="margin-top: 2rem;">
+            <a href="mailto:TEH2@UCLEDU" style="color: white; text-decoration: none;">
+                <i class="fas fa-envelope"></i> TEH2@UCLEDU
+            </a>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section hidden">
+        <h2>Publications</h2>
+        <div class="pub-grid">
+            <!-- Publication cards from CV -->
+            <div class="pub-card">
+                <h3>TESS–Gaia Light Curve</h3>
+                <p class="meta">Han & Brandt 2023</p>
+                <p>PSF-based TESS FFI light-curve product now widely used in stellar and exoplanet sciences</p>
+            </div>
+            <!-- Add other publications -->
+        </div>
+    </section>
+
+    <!-- Talks Section -->
+    <section id="talks" class="section hidden">
+        <h2>Conference Presentations</h2>
+        <div class="talk-list">
+            <!-- Talk items from CV -->
+            <div class="talk-item">
+                <h3>TESS Science Conference III</h3>
+                <p class="meta">July 2024 | MIT</p>
+                <p>Contributed talk: TESS-Gaia Light Curve statistical analysis</p>
+            </div>
+            <!-- Add other talks -->
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section hidden">
+        <h2>Research Focus</h2>
+        <!-- Research content -->
+    </section>
+
+    <!-- Hobbies Section -->
     <section id="hobbies" class="section hidden">
-        <h2>Side Quests</h2>
+        <h2>Personal Pursuits</h2>
         <div class="hobby-grid">
-            <div class="hobby-card">
-                <i class="fas fa-star fa-3x"></i>
-                <h4>Astrophotography</h4>
-                <p>Capturing celestial phenomena through long-exposure imaging</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-gamepad fa-3x"></i>
-                <h4>Gaming</h4>
-                <p>Strategy and simulation games enthusiast</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-music fa-3x"></i>
-                <h4>Violinist</h4>
-                <p>Classical and contemporary repertoire</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-print fa-3x"></i>
-                <h4>3D Modeling/Printing</h4>
-                <p>Designing and prototyping scientific instruments</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-camera-retro fa-3x"></i>
-                <h4>Photography</h4>
-                <p>DSLR and drone aerial photography</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-plane fa-3x"></i>
-                <h4>Traveling</h4>
-                <p>Documenting dark sky preserves worldwide</p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-book fa-3x"></i>
-                <h4>Writing</h4>
-                <p>Author of <em>Wandering in the Lakes</em></p>
-            </div>
-            <div class="hobby-card">
-                <i class="fas fa-users fa-3x"></i>
-                <h4>TEDx Organizer</h4>
-                <p>Led TEDxHatbinNo3HighSchool event</p>
-            </div>
+            <!-- Hobby cards -->
         </div>
     </section>
 
     <script>
-        // Update showSection function to include new section
         function showSection(sectionId) {
-            // Previous code
-            if(sectionId === 'home') {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(sectionId).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+
+            if(sectionId !== 'home') {
+                document.getElementById(sectionId).scrollIntoView({behavior: 'smooth'});
+            } else {
                 window.scrollTo({top: 0, behavior: 'smooth'});
             }
         }
