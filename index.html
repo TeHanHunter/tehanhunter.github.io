@@ -1,159 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Te Han - Exoplanet Researcher</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Te Han — Exoplanets & Stellar Characterization</title>
+  <meta name="description" content="Te Han — astrophysicist focusing on exoplanets, TGLC, NEIDSpecMatch, and SURFSUP." />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 0.5rem 0;
-    }
-    .banner-avatar {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-bottom: 0.5rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav button {
-      margin: 0 0.5rem;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-    }
-    main {
-      padding: 2rem;
-    }
-    .tab {
-      display: none;
-      animation: fadeIn 0.5s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    /* Hide photo, contact, and title in all tabs except 'about' */
-    .no-about .banner-avatar,
-    .no-about #banner-contact,
-    .no-about h1,
-    .no-about #banner-role {
-      display: none;
-    }
-  </style>
 </head>
+
 <body>
-  <header id="header">
-    <img src="avatar.jpeg" alt="Te Han" class="banner-avatar">
-    <h1>Te Han</h1>
-    <p id="banner-role">Exoplanet Researcher</p>
-    <p id="banner-contact">
-      <a href="mailto:teh2@uci.edu" style="text-decoration: none;">teh2@uci.edu</a> • (805) 280-6544 • Irvine, CA</p>
-    <h3 id="banner-title"></h3>
-    <nav>
-      <button onclick="showTab('about')"><i class="fa-solid fa-user-astronaut"></i> About</button>
-      <button onclick="showTab('background')"><i class="fas fa-graduation-cap"></i> Background</button>
-      <button onclick="showTab('research')"><i class="fa-solid fa-meteor"></i> Research</button>
-      <button onclick="showTab('skills')"><i class="fa-solid fa-circle-question"></i> Side Quests</button>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <a class="brand" href="#top">TH</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
   </header>
 
-  <main>
-    <section id="about" class="tab">
-      <h2>Hi, I'm Te Han.</h2>
-      <p>I am an astrophysicist working on multiple aspects of exoplanet research. I led work on the TESS-Gaia Light Curve (TGLC) and published two papers that established TGLC as a key resource in the field. I also led the analysis of TOI-5344 b, a rare giant exoplanet orbiting an M-dwarf. My contributions include the NEIDSpecMatch algorithm for stellar parameter estimation and the SURFSUP survey of ultra-fast rotators.</p>
-    </section>
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <img class="avatar" src="avatar.jpeg" alt="Portrait of Te Han">
+    <div class="hero-text">
+      <h1 class="name">Te Han</h1>
+      <p class="role">Astrophysicist • Exoplanets & Stellar Characterization</p>
+      <p class="meta">
+        <a href="mailto:teh2@uci.edu">teh2@uci.edu</a> · Irvine, CA
+      </p>
+      <div class="links">
+        <a href="https://github.com/TeHanHunter" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=icmoWO4AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://makerworld.com/@tehanhunter" target="_blank" rel="noopener" aria-label="MakerWorld"><i class="fa-solid fa-cubes"></i></a>
+        <!-- Optional CV link -->
+        <!-- <a href="cv.pdf" target="_blank" rel="noopener" aria-label="CV"><i class="fa-regular fa-file-lines"></i></a> -->
+      </div>
+    </div>
+  </section>
 
-    <section id="background" class="tab">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Ph.D. Physics</strong>, UC Irvine, Sep 2021 – </li>
-        <li><strong>M.S. Physics</strong>, UC Irvine, Sep 2021 – Nov 2024</li>
-        <li><strong>B.S. Physics</strong>, UC Santa Barbara, Sep 2017 – Aug 2020<br>GPA: 3.99/4.00, Highest Honors</li>
-      </ul>
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Graduate Student Researcher</strong>, UC Irvine, Jan 2023 – Present</li>
-        <li><strong>Teaching Assistant</strong>, UC Irvine, Sep 2021 – Dec 2022</li>
-        <li><strong>Lab Assistant</strong>, UCSB, Oct 2020 – Aug 2021</li>
-        <li><strong>Physics Study Room Fellow</strong>, UCSB, Apr 2018 – Jun 2020</li>
-        <li><strong>Learning Assistant</strong>, UCSB, Apr 2018 – Jun 2019</li>
-      </ul>
-    </section>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I’m a researcher working across multiple facets of exoplanet science. I led
+      the TESS–Gaia Light Curves (TGLC) effort and published papers establishing TGLC
+      as a community resource. I also led the analysis of TOI-5344 b, a rare giant
+      planet around an M dwarf. My toolkit includes the NEIDSpecMatch algorithm for
+      stellar parameter estimation and the SURFSUP survey of ultra-fast rotators.
+    </p>
 
-    <section id="research" class="tab">
-      <h2>First-Author Publications</h2>
-      <ul>
-        <li><strong>TESS–Gaia Light Curve:</strong> Han & Brandt 2023</li>
-        <li><strong>TOI-5344 b:</strong> Han et al. 2024</li>
-        <li><strong>NEIDSpecMatch:</strong> Han et al. 2025</li>
-        <li><strong>TGLC Statistical Analyses:</strong> Han et al. (in prep)</li>
-      </ul>
-      <h2>Talks and Posters</h2>
-      <ul>
-        <li>Contributed Talk, TESS Mission Update (MIT, Jun 2023)</li>
-        <li>Invited Talk, TESS Science Talk (MIT, Aug 2023)</li>
-        <li>Invited Talk, ExSoCal (Caltech, Dec 2023)</li>
-        <li>Invited Talk, TESS Science Talk (MIT, Apr 2024)</li>
-        <li>Poster, CoolStars22 (UCSD, Jun 2024)</li>
-        <li>Contributed Talk, TESS Science Conference III (MIT, Jul 2024)</li>
-        <li>Poster, Know Thy Star, Know Thy Planet 2 (Caltech, Feb 2025)</li>
-      </ul>
-    </section>
+    <div class="two-col">
+      <div>
+        <h3>Education</h3>
+        <ul class="tight">
+          <li><strong>Ph.D., Physics</strong>, UC Irvine (2021— )</li>
+          <li><strong>M.S., Physics</strong>, UC Irvine (2021—2024)</li>
+          <li><strong>B.S., Physics</strong>, UC Santa Barbara (2017—2020), Highest Honors</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Experience</h3>
+        <ul class="tight">
+          <li><strong>Graduate Student Researcher</strong>, UC Irvine (2023— )</li>
+          <li><strong>Teaching Assistant</strong>, UC Irvine (2021—2022)</li>
+          <li><strong>Lab Assistant</strong>, UCSB (2020—2021)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills" class="tab">
-      <h2>Skills</h2>
-      <p>Python, Ground telescope planning and observation, 3D modeling, Data analysis, Teaching</p>
-      <h2>Languages</h2>
-      <p>Chinese (Native), English (Highly proficient)</p>
-      <h2>Hobbies</h2>
-      <p>Astrophotography, Gaming, Violin, 3D printing, DSLR/Drone photography, Traveling, Writing</p>
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://github.com/TeHanHunter" target="_blank">GitHub</a></li>
-        <li><a href="https://makerworld.com/@tehanhunter" target="_blank">MakerWorld</a></li>
-      </ul>
-    </section>
-  </main>
+  <!-- News / Now -->
+  <section id="news" class="section">
+    <h2>News</h2>
+    <div class="cards">
+      <article class="card">
+        <h4>Preprint</h4>
+        <p>“Hundreds of TESS exoplanets might be larger than we thought”.</p>
+      </article>
+      <article class="card">
+        <h4>Code</h4>
+        <p>New TGLC function to disentangle transit sources among close stars in TESS.</p>
+      </article>
+      <article class="card">
+        <h4>Survey</h4>
+        <p>SURFSUP: surveying ultra-fast rotators for super-young planets.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <h2>Publications (first-author)</h2>
+    <div class="pubs">
+      <div class="pub">
+        <div class="pub-badge">2023</div>
+        <h3>TESS–Gaia Light Curves (TGLC)</h3>
+        <p>Han &amp; Brandt 2023.</p>
+        <!-- <a class="pub-link" href="DOI_OR_ARXIV" target="_blank" rel="noopener">Paper</a> -->
+      </div>
+      <div class="pub">
+        <div class="pub-badge">2024</div>
+        <h3>TOI-5344 b: a rare giant around an M dwarf</h3>
+        <p>Han et&nbsp;al. 2024.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-badge">2025</div>
+        <h3>NEIDSpecMatch</h3>
+        <p>Han et&nbsp;al. 2025.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-badge">in prep</div>
+        <h3>TGLC Statistical Analyses</h3>
+        <p>Han et&nbsp;al. in preparation.</p>
+      </div>
+    </div>
+    <!-- Optional: add "Selected co-author" section similarly -->
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="proj">
+        <h3>TGLC</h3>
+        <p>MAST HLSP providing high-quality light curves by combining TESS with Gaia priors.</p>
+        <div class="tags"><span>photometry</span><span>pipelines</span><span>HLSP</span></div>
+      </article>
+      <article class="proj">
+        <h3>NEIDSpecMatch</h3>
+        <p>Library-based spectral fitting to derive robust stellar parameters for exoplanet hosts.</p>
+        <div class="tags"><span>spectroscopy</span><span>stellar params</span></div>
+      </article>
+      <article class="proj">
+        <h3>SURFSUP</h3>
+        <p>Surveying ultra-fast rotators to find planets around very young stars.</p>
+        <div class="tags"><span>young stars</span><span>surveys</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Teaching & Skills -->
+  <section id="teaching" class="section">
+    <h2>Teaching & Skills</h2>
+    <div class="two-col">
+      <div>
+        <h3>Teaching</h3>
+        <ul class="tight">
+          <li>Teaching Assistant, UC Irvine (Physics)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Skills</h3>
+        <p>Python; exoplanet transit/RV analysis; ground-based observing; GP modeling; data visualization.</p>
+        <p>Languages: Chinese (native), English (professional).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p><a href="mailto:teh2@uci.edu">teh2@uci.edu</a> · Irvine, CA · <a href="https://github.com/TeHanHunter" target="_blank" rel="noopener">GitHub</a></p>
+  </section>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Te Han</small>
+  </footer>
 
   <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab').forEach(tab => {
-        tab.style.display = tab.id === tabId ? 'block' : 'none';
-      });
-
-      const header = document.getElementById('header');
-      header.classList.toggle('no-about', tabId !== 'about');
-
-      // Update the banner title for non-'about' tabs
-      const bannerTitle = document.getElementById('banner-title');
-      if (tabId !== 'about') {
-        bannerTitle.textContent = "Te Han";
-      } else {
-        bannerTitle.textContent = "";
+    // Dark mode toggle
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('th_theme',
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      );
+    });
+    (function initTheme(){
+      const saved = localStorage.getItem('th_theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
       }
-    }
-    showTab('about');
+    })();
+
+    // Active link on scroll
+    const links = [...document.querySelectorAll('.nav a')];
+    const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY + 90;
+      let active = 0;
+      sections.forEach((sec, i) => { if (sec.offsetTop <= y) active = i; });
+      links.forEach((a, i) => a.classList.toggle('active', i === active));
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
