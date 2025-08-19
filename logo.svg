@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-labelledby="t2">
+  <title id="t2">TH Monogram — Alternating White/Black Stroke Layers</title>
+
+  <!-- H right -->
+  <path d="M78 28v44" stroke="white" stroke-width="12" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M78 28v44" stroke="black" stroke-width="8" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+
+  <!-- H crossbar -->
+  <path d="M50 52h28" stroke="white" stroke-width="12" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M50 52h28" stroke="black" stroke-width="8" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+
+  <!-- T stem / H left -->
+  <path d="M50 28v44" stroke="white" stroke-width="12" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M50 28v44" stroke="black" stroke-width="8" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+
+  <!-- T top -->
+  <path d="M32 28h36" stroke="white" stroke-width="12" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M32 28h36" stroke="black" stroke-width="8" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+
+  </svg>
