@@ -3,220 +3,313 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Te Han — Ph.D. Candidate, UC Irvine</title>
-  <meta name="description" content="Te Han — astrophysicist focusing on exoplanets, TGLC, NEIDSpecMatch, and SURFSUP." />
+  <title>Te Han — Planet Hunter & Astrophysicist</title>
+  <meta name="description" content="Te Han is an astrophysicist exploring young exoplanets with next-generation surveys and instrumentation." />
 
-  <!-- Color scheme + address bar color -->
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0e1015" media="(prefers-color-scheme: dark)">
 
-    <!-- Favicon / icons -->
-    <link rel="icon" href="/favicon.ico" sizes="any"> <!-- classic fallback -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/logo-16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <!-- If you keep an SVG logo for modern browsers, include it too -->
-    <link rel="icon" type="image/svg+xml" href="/logo.svg">
-    <!-- (Optional) Safari pinned tab monochrome icon -->
-    <!-- <link rel="mask-icon" href="/logo-mask.svg" color="#186ef0"> -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/logo-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
 
-  <!-- Assets -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<!-- Header / Nav -->
-<header class="site-header">
-  <!-- Logo -->
-  <a class="brand brand-img" href="#top" aria-label="Home">
-    <img src="logo.svg" alt="TH">
-  </a>
-
-  <!-- Navigation -->
-  <nav class="nav" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
-    <a href="#positions">Positions</a>
-    <a href="#talks">Talks</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-    <a href="#news">News</a>
-  </nav>
-
-  <!-- Dark mode toggle -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fa-solid fa-circle-half-stroke"></i>
-  </button>
-</header>
-
-<!-- (rest of your HTML unchanged) -->
-</body>
-</html>
-  <!-- Hero -->
-  <section id="top" class="hero">
-    <img class="avatar" src="avatar.jpeg" alt="Portrait of Te Han">
-    <div class="hero-text">
-      <h1 class="name">Te Han</h1>
-      <p class="role">Ph.D. Candidate · UC Irvine</p>
-      <p class="meta">
-        Irvine, US 92697 · (805) 280-6544 · <a href="mailto:teh2@uci.edu">teh2@uci.edu</a>
-      </p>
-      <div class="links">
-        <a href="https://scholar.google.com/citations?user=icmoWO4AAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a href="https://github.com/TeHanHunter" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-        <a href="https://ui.adsabs.harvard.edu/user/libraries/i0dN71eMRXya8elFayuVLw" target="_blank" rel="noopener"><i class="fa-solid fa-book"></i></a>
-      </div>
+  <header class="site-header" id="top">
+    <div class="site-header-inner">
+      <a class="brand brand-img" href="#top" aria-label="Home">
+        <img src="logo.svg" alt="TH monogram">
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#spotlight">Spotlight</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
     </div>
-  </section>
+  </header>
 
-  <div class="layout">
-    <main>
-      <!-- About -->
-      <section id="about" class="section">
-        <h2>About</h2>
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img class="avatar" src="avatar.jpeg" alt="Portrait of Te Han" loading="lazy">
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow">Astrophysicist & Planet Hunter</span>
+        <h1>Te Han</h1>
         <p>
-        I am a planet hunter. I began at UCSB with Tim Brandt, improving TESS full-frame image light curves and laying the groundwork for the TESS–Gaia Light Curves (TGLC) dataset. At UC Irvine with Paul Robertson, I joined the GEMS survey and led the discovery of TOI-5344 b, a giant planet orbiting an M dwarf. Building on TGLC, we revealed a systematic underestimation of TESS planet radii affecting hundreds of known worlds. Now, I lead SURFSUP, a survey of ultra-fast rotators to uncover some of the youngest planets in our galaxy. I am actively working on planets across stellar types and leveraging the best instruments available today and in the future.        </p>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="grid">
-          <article class="proj">
-            <h3>TGLC</h3>
-            <p>PSF-based TESS FFI light-curve product, published as a MAST HLSP.</p>
-          </article>
-          <article class="proj">
-            <h3>NEIDSpecMatch</h3>
-            <p>Stellar parameter estimation with NEID spectra using an empirical library.</p>
-          </article>
-          <article class="proj">
-            <h3>SURFSUP</h3>
-            <p>Surveying ultrafast rotators for super-young planets.</p>
-          </article>
+          Ph.D. candidate at UC Irvine building surveys and data tools that reveal how planets grow around stars of every kind.
+          I chase newborn worlds, improve the sensitivity of space missions, and deliver pipelines that the community can rely on.
+        </p>
+        <div class="hero-meta">
+          <span>Irvine, California</span>
+          <a href="mailto:teh2@uci.edu">teh2@uci.edu</a>
+          <span>(805) 280-6544</span>
         </div>
-      </section>
-
-      <!-- Publications -->
-<section id="publications" class="section">
-  <h2>First-Author Publications</h2>
-  <ul class="pub-list">
-    <li>
-      <em>TESS–Gaia Light Curve: A PSF-based TESS FFI Light-curve Product</em>,
-      Han &amp; Brandt, <em>AJ</em> 165, 71 (2023).
-      <a href="https://ui.adsabs.harvard.edu/abs/2023AJ....165...71H/abstract" target="_blank" rel="noopener">ADS</a>
-    </li>
-    <li>
-      <em>TOI-5344 b: A Saturn-like Planet Orbiting a Super-solar Metallicity M0 Dwarf</em>,
-      Han, Robertson, Kanodia et&nbsp;al., <em>AJ</em> 167, 4 (2024).
-      <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167....4H/abstract" target="_blank" rel="noopener">ADS</a>
-    </li>
-    <li>
-      <em>NEIDSpecMatch: Stellar Parameter Estimation with NEID Spectra Using an Empirical Library</em>,
-      Han, Robertson, Ca&ntilde;as et&nbsp;al., <em>RNAAS</em> 9, 63 (2025).
-      <a href="https://ui.adsabs.harvard.edu/abs/2025RNAAS...9...63H" target="_blank" rel="noopener">ADS</a>
-    </li>
-    <li>
-      <em>Hundreds of TESS Exoplanets Might Be Larger than We Thought</em>,
-      Han, Robertson, Brandt et&nbsp;al., <em>ApJL</em> 988, L4 (2025).
-      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2506.19985" target="_blank" rel="noopener">ADS</a>
-    </li>
-    <li>
-      <em>SURFSUP: Surveying Ultrafast Rotators For SUperyoung Planets</em>,
-      Han, Robertson, Holcomb et&nbsp;al., In prep. (2025).
-      <!-- Add ADS link when available -->
-    </li>
-  </ul>
-</section>
-
-      <!-- Education -->
-      <section id="education" class="section">
-        <h2>Education</h2>
-        <ul class="cv-list">
-          <li><strong>Ph.D. in Physics</strong>, University of California, Irvine — 2021–2026 (expected)<br><span class="muted">Advisor: Paul Robertson</span></li>
-          <li><strong>M.S. in Physics</strong>, University of California, Irvine — 2021–2024<br><span class="muted">Advisor: Paul Robertson</span></li>
-          <li><strong>B.S. in Physics</strong>, University of California, Santa Barbara — 2017–2020<br><span class="muted">Advisor: Timothy Brandt</span></li>
-        </ul>
-      </section>
-
-      <!-- Positions -->
-      <section id="positions" class="section">
-        <h2>Research &amp; Academic Positions</h2>
-        <ul class="cv-list">
-          <li><strong>Visiting Student</strong>, MIT — 2025</li>
-          <li><strong>Graduate Student Researcher</strong>, UC Irvine — 2023–present</li>
-          <li><strong>Teaching Assistant</strong>, UC Irvine — 2021–2022</li>
-          <li><strong>Lab Assistant</strong>, UC Santa Barbara — 2020–2021</li>
-          <li><strong>Physics Study Room Fellow</strong>, UC Santa Barbara — 2018–2020</li>
-          <li><strong>Learning Assistant</strong>, UC Santa Barbara — 2018–2019</li>
-        </ul>
-      </section>
-
-    <!-- Talks -->
-    <section id="talks" class="section">
-      <h2>Talks &amp; Posters</h2>
-      <ul class="cv-list">
-        <li><strong>Caltech/IPAC Lunch Seminar</strong> — Invited talk: TGLC &amp; TESS radius bias · Apr 2025</li>
-        <li><strong>Know Thy Star, Caltech</strong> — Poster: SURFSUP · Feb 2025</li>
-        <li><strong>TESS Science Conference III, MIT</strong> — Contributed talk: TGLC Performance · Jul 2024</li>
-        <li><strong>CoolStars22, UCSD</strong> — Poster: SURFSUP · Jun 2024</li>
-        <li><strong>TESS Science Talk, MIT (Remote)</strong> — Invited talk: TGLC Technical details · Apr 2024</li>
-        <li><strong>ExoSoCal 2023, Caltech</strong> — Invited talk: TOI-5344 b as a GEMS planet · Dec 2023</li>
-        <li><strong>TESS Science Talk, MIT</strong> — Invited talk: TGLC Methods · Aug 2023</li>
-        <li><strong>TESS Mission Update, MIT</strong> — Contributed talk: TGLC · Jun 2023</li>
-      </ul>
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=icmoWO4AAAAJ&hl=en" target="_blank" rel="noopener">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+          <a href="https://github.com/TeHanHunter" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://ui.adsabs.harvard.edu/user/libraries/i0dN71eMRXya8elFayuVLw" target="_blank" rel="noopener">
+            <i class="fa-solid fa-book"></i>
+          </a>
+        </div>
+        <div class="cta-group">
+          <a class="btn primary" href="#research">Explore research</a>
+          <a class="btn ghost" href="Te_Han_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
     </section>
 
-      <!-- Skills -->
-      <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul class="cv-list">
-          <li><strong>Programming</strong>: Python</li>
-          <li><strong>Research &amp; Data</strong>: Ground-based telescope planning, Exoplanet modeling, RV time-series analysis, Light curve analysis, Spectra analysis, 3D modeling</li>
-          <li><strong>Technical Tools</strong>: Deep space astrophotography, DSLR/Drone photography, 3D printing</li>
-          <li><strong>Communication</strong>: Public speaking, Teaching, Science writing, TEDx organizer (TEDxHarbinNo3HighSchool)</li>
-          <li><strong>Languages</strong>: Chinese (Native), English (Fluent)</li>
-        </ul>
-      </section>
+    <section id="about" class="section">
+      <div class="section-heading">
+        <span class="label">About</span>
+        <h2>Mapping the next generation of worlds</h2>
+      </div>
+      <div class="section-grid">
+        <div class="panel">
+          <p>
+            I build the pipelines and observing playbooks that turn survey-scale data into trustworthy stories about planetary systems. From TESS–Gaia Light Curve’s PSF-based photometry to uncovering a systematic radius bias in the TESS catalog, my work blends instrumentation, machine learning, and community-ready software so teams can push beyond the limits of standard mission data products.
+          </p>
+          <p>
+            At UC Irvine, I am now weaving together precision radial velocities, activity-aware modeling, and high-cadence imaging to map how planets form and survive around the most challenging stars—from magnetically loud ultrafast rotators to future white-dwarf hosts.
+          </p>
+        </div>
+        <div class="panel accent">
+          <h3>Current focus</h3>
+          <ul class="checklist">
+            <li>Measuring planet demographics with the GEMS survey and NEIDSpecMatch.</li>
+            <li>Launching SURFSUP to catch the youngest, fastest-spinning stellar hosts.</li>
+          </ul>
+          <h3>On deck</h3>
+          <ul class="checklist">
+            <li>TWIRL — the TESS White dwarf Investigation of Remnant pLanets, a search for surviving worlds around WDs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Irvine, US 92697 · (805) 280-6544 · <a href="mailto:teh2@uci.edu">teh2@uci.edu</a></p>
-      </section>
-    </main>
-
-    <!-- News Sidebar -->
-    <aside id="news" class="sidebar">
-      <h2>News</h2>
-      <div class="cards">
-        <article class="card">
-          <h4>Publication</h4>
-          <p>ApJL: “Hundreds of TESS Exoplanets Might Be Larger than We Thought” (2025).</p>
+    <section id="research" class="section">
+      <div class="section-heading">
+        <span class="label">Research</span>
+        <h2>Selected work</h2>
+        <p>Building shared infrastructure for exoplanet discovery while chasing the most revealing planetary systems.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <figure class="feature-media">
+            <img src="tglc_image.png" alt="TESS–Gaia Light Curve workflow visualization">
+          </figure>
+          <div class="feature-body">
+            <h3>TESS–Gaia Light Curve: A PSF-based TESS FFI Light-curve Product</h3>
+            <p>
+              Turning raw TESS full-frame images into precision light curves—released as a MAST HLSP that now underpins community time-domain science.
+            </p>
+            <ul class="tag-list">
+              <li>Community pipelines</li>
+              <li>Time-domain astronomy</li>
+              <li>Open science</li>
+            </ul>
+            <div class="feature-links">
+              <a href="https://ui.adsabs.harvard.edu/abs/2023AJ....165...71H/abstract" target="_blank" rel="noopener">Read the paper</a>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h4>Project</h4>
-          <p>SURFSUP early results presented at CoolStars22 and Know Thy Star II.</p>
+        <article class="feature-card">
+          <figure class="feature-media">
+            <img src="hundreds_of_TESS.png" alt="Visualization of TESS radius bias for hundreds of exoplanets">
+          </figure>
+          <div class="feature-body">
+            <h3>Hundreds of TESS Exoplanets Might Be Larger than We Thought</h3>
+            <p>
+              Revealing a systematic radius bias in the TESS catalog by reanalyzing planets with TGLC light curves, revised stellar parameters, and updated inference.
+            </p>
+            <ul class="tag-list">
+              <li>Planet demographics</li>
+              <li>Precision photometry</li>
+              <li>Bias correction</li>
+            </ul>
+            <div class="feature-links">
+              <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...988L...4H/" target="_blank" rel="noopener">Read the paper</a>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h4>Talk</h4>
-          <p>Invited seminar at Caltech/IPAC on TGLC and TESS radius bias (Apr 2025).</p>
+        <article class="feature-card">
+          <figure class="feature-media">
+            <img src="GEMS.png" alt="GEMS survey visualization of TOI-5344 b discovery">
+          </figure>
+          <div class="feature-body">
+            <h3>TOI-5344 b: A Saturn-like Planet Orbiting an M Dwarf Discovered with GEMS</h3>
+            <p>
+              Mapping giant planets around M dwarfs through the GEMS survey, highlighted by the TOI-5344 b discovery that probes formation across the lowest-mass stars.
+            </p>
+            <ul class="tag-list">
+              <li>Radial velocities</li>
+              <li>M-dwarf planets</li>
+              <li>Survey design</li>
+            </ul>
+            <div class="feature-links">
+              <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167....4H/" target="_blank" rel="noopener">Read the paper</a>
+            </div>
+          </div>
         </article>
       </div>
-    </aside>
-  </div>
+    </section>
+
+    <section id="spotlight" class="section">
+      <div class="section-heading">
+        <span class="label">Spotlight</span>
+        <h2>Recent highlights</h2>
+        <p>Talks, papers, and signals I am excited about right now.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Hundreds of TESS planets might be bigger than we thought</h3>
+          <p>ApJL 2025: uncovering a systematic bias in measured radii using TGLC-informed modeling.</p>
+        </article>
+        <article class="card">
+          <h3>SURFSUP takes the stage</h3>
+          <p>Early SURFSUP findings shared at CoolStars22 and Know Thy Star II, showcasing the youngest rotating systems.</p>
+        </article>
+        <article class="card">
+          <h3>TWIRL takes shape</h3>
+          <p>Preparing the TESS White dwarf Investigation of Remnant pLanets to mine 200-s FFIs for post-main-sequence worlds with machine-learning vetting and TGLC photometry.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cv" class="section">
+      <div class="section-heading">
+        <span class="label">CV</span>
+        <h2>Snapshot resume</h2>
+        <p>
+          Prefer the full document? <a href="Te_Han_CV.pdf" target="_blank" rel="noopener">Grab the PDF directly</a>, or open the sections below for quick context.
+        </p>
+      </div>
+      <div class="cv-panels" id="cv-panels">
+        <details open>
+          <summary>Education</summary>
+          <ul>
+            <li><strong>Ph.D. in Physics</strong>, University of California, Irvine — 2021–2026 (expected)<br><span class="muted">Advisor: Paul Robertson · GPA: 3.97/4.0</span></li>
+            <li><strong>B.S. in Physics</strong>, University of California, Santa Barbara — 2017–2020<br><span class="muted">Advisor: Timothy Brandt · GPA: 3.99/4.0</span></li>
+          </ul>
+        </details>
+        <details>
+          <summary>Awards &amp; honors</summary>
+          <ul>
+            <li><strong>Chancellor’s Fellowship</strong>, UC Irvine — 2021–2023</li>
+            <li><strong>Highest Honors (Honors at Graduation)</strong>, UC Santa Barbara — 2017–2020</li>
+            <li><strong>Dean’s Honors (Letters &amp; Science)</strong>, UC Santa Barbara — 2018–2020</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Selected positions</summary>
+          <ul>
+            <li><strong>Visiting Graduate Student</strong>, MIT — 2025</li>
+            <li><strong>Graduate Student Researcher</strong>, UC Irvine — 2023–present</li>
+            <li><strong>Teaching Assistant</strong>, UC Irvine — 2021–2022</li>
+            <li><strong>Lab Assistant</strong>, UC Santa Barbara — 2020–2021</li>
+            <li><strong>Physics Study Room Fellow</strong>, UC Santa Barbara — 2018–2020</li>
+            <li><strong>Learning Assistant</strong>, UC Santa Barbara — 2018–2019</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Talks &amp; posters</summary>
+          <ul>
+            <li><strong>Invited:</strong> Caltech/IPAC Lunch Seminar — The radius bias of TESS exoplanets · Apr 2025</li>
+            <li><strong>Invited:</strong> TESS Science Talk, MIT (Remote) — TGLC Technical Details · Apr 2024</li>
+            <li><strong>Invited:</strong> ExoSoCal 2023, Caltech — TOI-5344 b as a GEMS planet · Dec 2023</li>
+            <li><strong>Invited:</strong> TESS Science Talk, MIT — TGLC Methods · Aug 2023</li>
+            <li><strong>Contributed:</strong> TESS Science Conference III, MIT — TGLC Performance · Jul 2024</li>
+            <li><strong>Contributed:</strong> TESS Mission Update, MIT — GEMS progress · Jun 2023</li>
+            <li><strong>Poster:</strong> Know Thy Star, Caltech — SURFSUP highlights · Feb 2025</li>
+            <li><strong>Poster:</strong> Cool Stars 22, UC San Diego — SURFSUP early results · Jun 2024</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Skills</summary>
+          <ul>
+            <li><strong>Programming</strong>: Python</li>
+            <li><strong>Research &amp; data</strong>: Ground-based telescope planning &amp; observing (Shane 3-m, HET, WIYN), Exoplanet modeling, Radial velocity analysis, Light curve analysis, Spectra analysis, 3D modeling</li>
+            <li><strong>Technical tools</strong>: Deep space astrophotography, DSLR/drone photography, 3D printing</li>
+            <li><strong>Communication</strong>: Public speaking, Teaching, Science writing, TEDx organizer (TEDxHarbinNo3HighSchool)</li>
+            <li><strong>Languages</strong>: Chinese (Native), English (Fluent)</li>
+          </ul>
+        </details>
+        <details>
+          <summary>First-author publications</summary>
+          <ul class="pub-list">
+            <li>
+              <em>TESS–Gaia Light Curve: A PSF-based TESS FFI Light-curve Product</em>,
+              Han &amp; Brandt, <em>AJ</em> 165, 71 (2023).
+              <a href="https://ui.adsabs.harvard.edu/abs/2023AJ....165...71H/abstract" target="_blank" rel="noopener">ADS</a>
+            </li>
+            <li>
+              <em>TOI-5344 b: A Saturn-like Planet Orbiting a Super-solar Metallicity M0 Dwarf</em>,
+              Han et al., <em>AJ</em> 167, 4 (2024).
+              <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167....4H/" target="_blank" rel="noopener">ADS</a>
+            </li>
+            <li>
+              <em>NEIDSpecMatch: Stellar Parameter Estimation with NEID Spectra Using an Empirical Library</em>,
+              Han et al., <em>RNAAS</em> 9, 63 (2025).
+              <a href="https://ui.adsabs.harvard.edu/abs/2025RNAAS...9...63H/" target="_blank" rel="noopener">ADS</a>
+            </li>
+            <li>
+              <em>Hundreds of TESS Exoplanets Might Be Larger than We Thought</em>,
+              Han et al., <em>ApJL</em> 988, L4 (2025).
+              <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...988L...4H/" target="_blank" rel="noopener">ADS</a>
+            </li>
+            <li>
+              <em>SURFSUP: Surveying Ultrafast Rotators For Superyoung Planets</em>,
+              Han et al., In preparation (2025).
+            </li>
+            <li>
+              <em>TESS–Gaia Light Curve: Photometric precision analysis and new functionalities</em>,
+              Han et al., In preparation (2025).
+            </li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-heading">
+        <span class="label">Contact</span>
+        <h2>Let's collaborate</h2>
+        <p>Have an idea, a dataset, or a mission concept? I would love to hear about it.</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>Email</strong>: <a href="mailto:teh2@uci.edu">teh2@uci.edu</a></p>
+        <p><strong>Phone</strong>: (805) 280-6544</p>
+        <p><strong>Office</strong>: Department of Physics &amp; Astronomy, UC Irvine</p>
+        <div class="cta-group">
+          <a class="btn primary" href="mailto:teh2@uci.edu?subject=Hello%20from%20the%20web">Start a conversation</a>
+          <a class="btn ghost" href="https://scholar.google.com/citations?user=icmoWO4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="https://scholar.google.com/citations?user=icmoWO4AAAAJ&hl=en">Google Scholar</a> ·
-      <a href="https://github.com/TeHanHunter">GitHub</a> ·
-      <a href="https://ui.adsabs.harvard.edu/user/libraries/i0dN71eMRXya8elFayuVLw">ADS Publications</a>
+      <a href="https://scholar.google.com/citations?user=icmoWO4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
+      <a href="https://github.com/TeHanHunter" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://ui.adsabs.harvard.edu/user/libraries/i0dN71eMRXya8elFayuVLw" target="_blank" rel="noopener">ADS Library</a>
     </div>
     <small>© <span id="year"></span> Te Han</small>
   </footer>
@@ -236,11 +329,13 @@
       }
     })();
     const links = [...document.querySelectorAll('.nav a')];
-    const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+    const sections = links
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
     window.addEventListener('scroll', () => {
-      const y = window.scrollY + 90;
+      const y = window.scrollY + 100;
       let active = 0;
-      sections.forEach((sec, i) => { if (sec && sec.offsetTop <= y) active = i; });
+      sections.forEach((sec, i) => { if (sec.offsetTop <= y) active = i; });
       links.forEach((a, i) => a.classList.toggle('active', i === active));
     });
     document.getElementById('year').textContent = new Date().getFullYear();
