@@ -62,6 +62,7 @@ img{max-width:100%; height:auto; display:block}
   padding:.7rem 1.2rem;
   border-radius:var(--radius-md);
   border:1px solid var(--border);
+  background:var(--surface);
   background:linear-gradient(135deg,
     color-mix(in srgb, var(--surface) 88%, transparent) 0%,
     color-mix(in srgb, var(--surface-alt) 82%, transparent) 100%);
