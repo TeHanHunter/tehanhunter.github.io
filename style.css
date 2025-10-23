@@ -218,12 +218,12 @@ img{max-width:100%; height:auto; display:block}
 /* ===== Sections ===== */
 .section{
   max-width:var(--container);
-  margin:4rem auto;
+  margin:2.1rem auto 1.5rem;
   padding:0 1.5rem;
   scroll-margin-top:140px;
 }
 .section-heading{
-  margin-bottom:2rem;
+  margin-bottom:.8rem;
 }
 .label{
   display:inline-block;
@@ -235,10 +235,11 @@ img{max-width:100%; height:auto; display:block}
   padding:.2rem .7rem;
   border-radius:999px;
   font-weight:600;
+  margin-bottom:.15rem;
 }
 .section-heading h2{
   font-size:2.4rem;
-  margin:.9rem 0 .6rem;
+  margin:.35rem 0 .25rem;
 }
 .section-heading p{color:var(--text-subtle);}
 
@@ -563,6 +564,6 @@ details ul li{margin:.45rem 0}
     gap:.6rem;
   }
   .nav{display:none}
-  .hero{margin:0 auto 3.2rem; padding:3.2rem 1.2rem}
-  .section{margin:3.4rem auto; padding:0 1.2rem}
+  .hero{margin:0 auto 2.1rem; padding:2.8rem 1.2rem}
+  .section{margin:2.3rem auto 1.5rem; padding:0 1.2rem}
 }
