@@ -23,7 +23,8 @@
 </head>
 
 <body>
-  <header class="site-header" id="top">
+  <div id="top"></div>
+  <header class="site-header">
     <div class="site-header-inner">
       <a class="brand brand-img" href="#top" aria-label="Home">
         <img src="logo.svg" alt="TH monogram">
@@ -372,6 +373,17 @@
       links.forEach((a, i) => a.classList.toggle('active', i === active));
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const brandLink = document.querySelector('.brand-img');
+    if (brandLink) {
+      brandLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (window.location.hash !== '#top' && history.replaceState) {
+          history.replaceState(null, '', '#top');
+        }
+      });
+    }
   </script>
 </body>
 </html>
