@@ -671,10 +671,13 @@ details ul li{margin:.45rem 0}
     text-align:center;
   }
   .hero-media{order:-1}
+  .hero-content h1{
+    font-size:3rem;
+    justify-content:center;
+  }
   .hero-meta{justify-content:center}
   .profile-links{justify-content:center}
   .cta-group{justify-content:center}
-  .hero-content h1{font-size:3rem}
 }
 @media(max-width:900px){
   .timeline{
